@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ This file is part of GtkSourceView
+
+ Copyright (C) 2016 Jean-Patrick Guerrero <jeanpatrick.guerrero@gmail.com>
+ Color scheme by morhetz - https://github.com/morhetz/gruvbox
+
+ Copyright (C) 2020-2021 Han Tang <htang2@alaska.edu>
+ Color Scheme modified by han190 - https://github.com/han190/GtkSourceView-Bakery
+
+ GtkSourceView is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ GtkSourceView is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-->
+
+<style-scheme id="gruvbox-light" _name="Gruvbox-Light" version="1.0">
+
+  <author>Jean-Patrick Guerrero; Han Tang</author>
+  <_description>Light color scheme using the Gruvbox color palette</_description>
+
+  <!-- Gruvbox Palette -->
+
+  <color name="dark0_hard"      value="#1d2021"/>
+  <color name="dark0"           value="#282828"/>
+  <color name="dark0_soft"      value="#32302f"/>
+  <color name="dark1"           value="#3c3836"/>
+  <color name="dark2"           value="#504945"/>
+  <color name="dark3"           value="#665c54"/>
+  <color name="dark4"           value="#7c6f64"/>
+
+  <color name="gray"            value="#928374"/>
+
+  <color name="light0_hard"     value="#f9f5d7"/>
+  <color name="light0"          value="#fbf1c7"/>
+  <color name="light0_soft"     value="#f2e5bc"/>
+  <color name="light1"          value="#ebdbb2"/>
+  <color name="light2"          value="#d5c4a1"/>
+  <color name="light3"          value="#bdae93"/>
+  <color name="light4"          value="#a89984"/>
+
+  <color name="bright_red"      value="#fb4934"/>
+  <color name="bright_green"    value="#b8bb26"/>
+  <color name="bright_yellow"   value="#fabd2f"/>
+  <color name="bright_blue"     value="#83a598"/>
+  <color name="bright_purple"   value="#d3869b"/>
+  <color name="bright_aqua"     value="#8ec07c"/>
+  <color name="bright_orange"   value="#fe8019"/>
+
+  <color name="neutral_red"     value="#cc241d"/>
+  <color name="neutral_green"   value="#98971a"/>
+  <color name="neutral_yellow"  value="#d79921"/>
+  <color name="neutral_blue"    value="#458588"/>
+  <color name="neutral_purple"  value="#b16286"/>
+  <color name="neutral_aqua"    value="#689d6a"/>
+  <color name="neutral_orange"  value="#d65d0e"/>
+
+  <color name="faded_red"       value="#9d0006"/>
+  <color name="faded_green"     value="#79740e"/>
+  <color name="faded_yellow"    value="#b57614"/>
+  <color name="faded_blue"      value="#076678"/>
+  <color name="faded_purple"    value="#8f3f71"/>
+  <color name="faded_aqua"      value="#427b58"/>
+  <color name="faded_orange"    value="#af3a03"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        background="light0_hard" foreground="dark1"/>
+  <style name="selection"                   background="light2" foreground="dark4"/>
+  <style name="line-numbers"                background="light0_hard" foreground="dark1"/>
+  <style name="cursor"                      foreground="dark1"/>
+  <style name="secondary-cursor"            foreground="dark1"/>
+  <style name="current-line"                background="light3"/>
+  <style name="draw-spaces"                 foreground="dark2"/>
+  <style name="background-pattern"          background="light0"/>
+  <style name="bracket-mismatch"            foreground="light0" background="faded_red"/>
+  <style name="bracket-match"               foreground="faded_orange"/>
+  <style name="right-margin"                foreground="light0" background="dark2"/>
+  <style name="search-match"                foreground="light0" background="light4"/>
+
+  <!-- Code -->
+  <style name="def:base-n-integer"          foreground="faded_purple"/>
+  <style name="def:boolean"                 foreground="faded_purple"/>
+  <style name="def:builtin"                 foreground="faded_orange"/>
+  <style name="def:character"               foreground="faded_purple"/>
+  <style name="def:comment"                 foreground="gray"/>
+  <style name="def:complex"                 foreground="faded_purple"/>
+  <style name="def:decimal"                 foreground="faded_purple"/>
+  <style name="def:doc-comment"             foreground="gray"/>
+  <style name="def:doc-comment-element"     italic="true"/>
+  <style name="def:error"                   foreground="dark0" background="faded_red" bold="true"/>
+  <style name="def:floating-point"          foreground="faded_purple"/>
+  <style name="def:function"                foreground="faded_green"/>
+  <style name="def:identifier"              foreground="faded_blue"/>
+  <style name="def:keyword"                 foreground="faded_orange"/>
+  <style name="def:note"                    foreground="gray"/>
+  <style name="def:number"                  foreground="faded_purple"/>
+  <style name="def:operator"                foreground="faded_purple"/>
+  <style name="def:preprocessor"            foreground="faded_aqua"/>
+  <style name="def:reserved"                foreground="faded_aqua"/>
+  <style name="def:shebang"                 foreground="gray"/>
+  <style name="def:special-char"            foreground="faded_orange"/>
+  <style name="def:special-constant"        foreground="faded_purple"/>
+  <style name="def:statement"               foreground="faded_orange"/>
+  <style name="def:string"                  foreground="faded_green"/>
+  <style name="def:type"                    foreground="faded_yellow"/>
+  <style name="def:underlined"              italic="true" underline="single"/>
+  <style name="def:warning"                 foreground="dark0" background="faded_red"/>
+
+  <!-- Fortran -->
+  <style name="fortran:attribute"           foreground="faded_aqua"/>
+  <style name="fortran:builtin"             foreground="faded_aqua"/>
+  <style name="fortran:special-chr"         foreground="faded_orange"/>
+  <style name="fortran:operator"            foreground="faded_green"/>
+  <style name="fortran:function"            foreground="faded_green" bold="true"/>
+  <style name="fortran:character"           foreground="faded_purple"/>
+  <style name="fortran:decimal"             foreground="faded_yellow"/>
+  <style name="fortran:ftn-mod"             foreground="faded_yellow"/>
+  <style name="fortran:preprocessor"        foreground="faded_red"/>
+  <style name="fortran:preprocessor-inline" foreground="faded_red"/>
+
+  <!-- Gnuplot -->
+  <style name="gnuplot:keyword"             foreground="faded_aqua"/>
+  <style name="gnuplot:decimal"             foreground="light2"/>
+  <style name="gnuplot:floating-point"      foreground="light2"/>
+  <style name="gnuplot:options"             foreground="faded_blue"/>
+
+  <!-- Latex -->
+  <style name="latex:display-math"          foreground="faded_blue"/>
+  <style name="latex:common-commands"       foreground="faded_aqua"/>
+  <style name="latex:command"               foreground="faded_yellow"/>
+  <style name="latex:env-name"              foreground="faded_green"/>
+  <style name="latex:pkg-name"              foreground="faded_orange"/>
+  <style name="latex:section"               foreground="faded_red" italic="true"/>
+  <style name="latex:chapter"               foreground="faded_red" italic="true"/>
+
+  <!-- Markdown -->
+  <style name="markdown:header"             foreground="faded_yellow" bold="true"/>
+  <style name="markdown:horizontal-rule"    foreground="light0" bold="true"/>
+  <style name="markdown:code-span"          foreground="faded_aqua" italic="true"/>
+  <style name="markdown:code-block"         foreground="faded_blue"/>
+  <style name="markdown:url"                foreground="gray" underline="true" italic="true"/>
+  <style name="markdown:link-text"          foreground="faded_orange" bold="true"/>
+
+
+  <!-- Shell Script -->
+  <style name="sh:string"                   foreground="dark2" italic="true"/>
+  <style name="sh:keyword"                  foreground="dark1" bold="true"/>
+  <style name="sh:common-command"           foreground="faded_yellow" bold="true"/>
+  <style name="sh:function"                 foreground="faded_yellow" bold="true"/>
+
+</style-scheme>
+
