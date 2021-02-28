@@ -230,7 +230,7 @@
   <style name="fortran:ftn-mod"                   foreground="orange3"/>
   <style name="fortran:special-chr"               foreground="#677685"/>
   <style name="fortran:type"                      foreground="#669900" bold="true"/>
-  <style name="fortran:attribute"                 foreground="#669900"/>
+  <style name="fortran:attribute"                 foreground="#669900" bold="true"/>
   <style name="fortran:scope"                     foreground="#0077aa" bold="true"/>
   <style name="fortran:function"                  foreground="#0077aa" bold="true"/>
   <style name="fortran:float"                     foreground="orange3"/>
