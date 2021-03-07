@@ -659,14 +659,12 @@
     </context>
 
     <!-- Others -->
-    <context id="preprocessor" style-inside="false" style-ref="preprocessor">
-      <start>\#:</start>
-      <end>$</end>
+    <context id="preprocessor" style-ref="preprocessor">
+      <match>\#:</match>
     </context>
 
-    <context id="preprocessor-inline" style-inside="false" style-ref="preprocessor-inline">
-      <start>\$\{</start>
-      <end>\}\$</end>
+    <context id="preprocessor-inline" style-ref="preprocessor-inline">
+      <match>\$\{|\}\$</match>
     </context>
 
     <context id="others">

@@ -221,20 +221,23 @@
   <style name="symboltree::attribute"       foreground="#000000" background="#F0E68C"/>
 
   <!-- Fortran -->
-  <style name="fortran:comment"             foreground="#8b9eab"/>
-  <style name="fortran:preprocessor"        foreground="#8194a6" bold="true"/>
+  <style name="fortran:comment"             foreground="aluminium5"/>
+  <style name="fortran:preprocessor"        foreground="#669900" bold="true"/>
+  <style name="fortran:preprocessor-inline" foreground="#669900"/>
   <style name="fortran:keyword"             foreground="#0077aa" bold="true"/>
   <style name="fortran:builtin"             foreground="#0077aa"/>
-  <style name="fortran:character"           foreground="orange3"/>
-  <style name="fortran:ftn-mod"             foreground="orange3"/>
+  <style name="fortran:character"           foreground="aluminium3" italic="true"/>
+  <style name="fortran:ftn-mod"             foreground="aluminium3" italic="true"/>
   <style name="fortran:special-chr"         foreground="#677685"/>
   <style name="fortran:operator"            foreground="#677685"/>
   <style name="fortran:type"                foreground="#669900" bold="true"/>
   <style name="fortran:attribute"           foreground="#669900" bold="true"/>
   <style name="fortran:scope"               foreground="#0077aa" bold="true"/>
   <style name="fortran:function"            foreground="#0077aa" bold="true"/>
-  <style name="fortran:float"               foreground="orange3"/>
-  <style name="fortran:decimal"             foreground="orange3"/>
+  <style name="fortran:float"               foreground="aluminium3"/>
+  <style name="fortran:decimal"             foreground="aluminium3"/>
+  <style name="fortran:io"                  foreground="#0077aa"/>
+  <style name="fortran:constant"            foreground="orange3"/>
 
 </style-scheme>
 
