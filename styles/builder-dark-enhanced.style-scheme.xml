@@ -91,7 +91,7 @@
   <style name="action::hover-definition"    background="#41464c" underline="true"/>
 
   <!-- Bracket Matching -->
-  <style name="bracket-match"               foreground="chocolate2" bold="true"/>
+  <style name="bracket-match"               foreground="skyblue1" bold="true"/>
   <style name="bracket-mismatch"            foreground="aluminium1" background="scarletred2" bold="true"/>
 
   <!-- Right Margin -->
@@ -227,7 +227,7 @@
   <style name="fortran:keyword"             foreground="#0077aa" bold="true"/>
   <style name="fortran:builtin"             foreground="#0077aa"/>
   <style name="fortran:character"           foreground="aluminium3" italic="true"/>
-  <style name="fortran:ftn-mod"             foreground="aluminium3" italic="true"/>
+  <style name="fortran:ftn-mod"             foreground="orange3" bold="true"/>
   <style name="fortran:special-chr"         foreground="#677685"/>
   <style name="fortran:operator"            foreground="#677685"/>
   <style name="fortran:type"                foreground="#669900" bold="true"/>
