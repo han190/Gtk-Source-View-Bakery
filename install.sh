@@ -1,51 +1,59 @@
 #! /usr/bin/env bash
 
+# BackupInstall ${FILENAME} ${FROM_DIR} ${TO_DIR}
 BackupInstall(){
-    if [ -f "$2/$1.bak" ] && [ -f "$2/$1" ]; then
-        echo "Both '$1' and '$1.bak' exist. Overwrite '$1'."
-        sudo cp $1 $2
+    if [ -f "$3/$1.bak" ] && [ -f "$3/$1" ]; then
+        echo -e "${NC}'$1'${GREEN} already exists."
+        echo -e "${NC}'$1.bak'${GREEN} already exists."
+        echo -e "${YELLOW}=> Backup and overwrite $1."
+        sudo cp $2/$1 $3
         return
-    elif [ ! -f "$2/$1.bak" ] && [ -f "$2/$1" ]; then
-        echo "'$1' exists, but '$1.bak' does not."
-        echo "Create '$1.bak' and overwrite '$1'."
-        sudo mv $2/$1 "$2/$1.bak"
-        sudo cp $1 $2
+    elif [ ! -f "$3/$1.bak" ] && [ -f "$3/$1" ]; then
+        echo -e "${NC}'$1'${GREEN} already exists."
+        echo -e "${NC}'$1.bak'${RED} doesn't exist."
+        echo -e "${YELLOW}=> Backup and overwrite $1."
+        sudo mv $3/$1 "$3/$1.bak"
+        sudo cp $2/$1 $3
         return
-    elif [ -f "$2/$1.bak" ] && [ ! -f "$2/$1" ]; then
-        echo "'$1.bak' exists, but '$1' does not. Create '$1'."
-        sudo cp $1 $2
-    elif [ ! -f "$2/$1.bak" ] && [ ! -f "$2/$1" ]; then
-        echo "Both '$1' and '$1.bak' don't exist. Create '$1'."
-        sudo cp $1 $2
+    elif [ -f "$3/$1.bak" ] && [ ! -f "$3/$1" ]; then
+        echo -e "${NC}'$1.bak'${GREEN} already exists."
+        echo -e "${NC}'$1'${RED} doesn't exist."
+        echo -e "${YELLOW}=> Create $1."
+        sudo cp $2/$1 $3
+    elif [ ! -f "$3/$1.bak" ] && [ ! -f "$3/$1" ]; then
+        echo -e "${NC}'$1'${RED} doesn't exist."
+        echo -e "${NC}'$1.bak'${RED} doesn't exist."
+        echo -e "${YELLOW}=> Create $1."
+        sudo cp $2/$1 $3
     fi
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
 # Directories of .land and .xml files
 GTK_DIR="/usr/share/gtksourceview-4"
-LANG_DIR="${GTK_DIR}/language-specs"
-STYLE_DIR="${GTK_DIR}/styles"
+GTK_LANG_DIR="${GTK_DIR}/language-specs"
+GTK_STYLE_DIR="${GTK_DIR}/styles"
 
-# Languages
-FORTRAN="fortran.lang"
-GNUPLOT="gnuplot.lang"
-NCL="ncl.lang"
+PROJ_DIR="$(pwd)"
+LOCAL_LANG_DIR="${PROJ_DIR}/languages"
+LOCAL_STYLE_DIR="${PROJ_DIR}/styles"
 
-# Color themes
-GRUVBOX_DARK="gruvbox-dark.xml"
-
-# Go to the ./languages,
 # backup and install all the files.
-cd ./languages
-for f in *.lang
+for file in ${LOCAL_LANG_DIR}/*.lang
 do
-    BackupInstall ${f} ${LANG_DIR}
+    FILENAME=$(basename $file)
+    BackupInstall ${FILENAME} ${LOCAL_LANG_DIR} ${GTK_LANG_DIR}
 done
-cd ..
 
-cd ./styles
-for f in *.xml
+for file in ${LOCAL_STYLE_DIR}/*.xml
 do
-    BackupInstall ${f} ${STYLE_DIR}
+    FILENAME=$(basename $file)
+    BackupInstall ${FILENAME} ${LOCAL_STYLE_DIR} ${GTK_STYLE_DIR}
 done
-cd ..
-echo "The GtkSourceView is uccessfully baked!"
+echo -e "${CYAN}=> The GtkSourceView is successfully baked!"

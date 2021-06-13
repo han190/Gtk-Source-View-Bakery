@@ -23,7 +23,6 @@
 
   <!-- Adwaita Palette -->
   <color name="blue1"                       value="#99c1f1"/>
-  <color name="blue1-transparent"           value="#rgba(153,193,241,0.75)"/>
   <color name="blue2"                       value="#62a0ea"/>
   <color name="blue3"                       value="#3584e4"/>
   <color name="blue4"                       value="#1c71d8"/>
@@ -71,7 +70,8 @@
   <!-- Global Settings -->
   <style name="text"                        foreground="dark2" background="light1"/>
   <style name="selection"                   background="selection_bg"/>
-  <style name="map-overlay"                 background="blue1-transparent"/>
+  <style name="map-overlay"                 background="#rgba(153,193,241,0.25)"/>
+  <!-- The color above is basically "blue1" with opacity = 0.25 -->
   <style name="cursor"                      foreground="dark2"/>
   <style name="line-numbers"                foreground="light4" background="light1"/>
   <style name="current-line"                background="light2"/>
