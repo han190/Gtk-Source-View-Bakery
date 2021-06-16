@@ -120,7 +120,7 @@
     </context>
 
     <context id="special-chr" style-ref="special-chr">
-      <match>&amp;|\%|\/\/</match>
+      <match>&amp;|\/\/</match>
     </context>
 
     <context id="float" style-ref="float">
@@ -667,10 +667,19 @@
       <match>\$\{|\}\$</match>
     </context>
 
+    <context id="type-bound-procedure">
+      <match>(([a-zA-Z][a-zA-Z0-9_]*)(\%))+([a-zA-Z][a-zA-Z0-9_]*)</match>
+      <include>
+        <context sub-pattern="3" style-ref="special-chr"/>
+        <context sub-pattern="4" style-ref="function"/>
+      </include>
+    </context>
+
     <context id="others">
       <include>
         <context ref="preprocessor"/>
         <context ref="preprocessor-inline"/>
+        <context ref="type-bound-procedure"/>
       </include>
     </context>
 
